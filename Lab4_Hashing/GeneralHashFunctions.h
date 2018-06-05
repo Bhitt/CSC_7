@@ -1,0 +1,47 @@
+/*
+ **************************************************************************
+ *                                                                        *
+ *          General Purpose Hash Function Algorithms Library              *
+ *                                                                        *
+ * Author: Arash Partow - 2002                                            *
+ * URL: http://www.partow.net                                             *
+ * URL: http://www.partow.net/programming/hashfunctions/index.html        *
+ *                                                                        *
+ * Copyright notice:                                                      *
+ * Free use of the General Purpose Hash Function Algorithms Library is    *
+ * permitted under the guidelines and in accordance with the MIT License. *
+ * http://www.opensource.org/licenses/MIT                                 *
+ *                                                                        *
+ **************************************************************************
+*/
+
+/* 
+ * File:   GeneralHashFunctions.h
+ * Author: bhitt
+ *
+ * Created on March 31, 2018, 1:57 PM
+ */
+
+#ifndef GENERALHASHFUNCTIONS_H
+#define GENERALHASHFUNCTIONS_H
+
+#include <string>
+
+
+typedef unsigned int (*HashFunction)(const std::string&);
+
+
+unsigned int RSHash  (const std::string& str);
+unsigned int JSHash  (const std::string& str);
+unsigned int PJWHash (const std::string& str);
+unsigned int ELFHash (const std::string& str);
+unsigned int BKDRHash(const std::string& str);
+unsigned int SDBMHash(const std::string& str);
+unsigned int DJBHash (const std::string& str);
+unsigned int DEKHash (const std::string& str);
+unsigned int BPHash  (const std::string& str);
+unsigned int FNVHash (const std::string& str);
+unsigned int APHash  (const std::string& str);
+
+#endif /* GENERALHASHFUNCTIONS_H */
+
